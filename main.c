@@ -359,6 +359,19 @@ start2:
                                         goto start2;
                                     }
                                 }
+                                else{
+                                    update_student(&head, new_student, index, select_update);
+                                    system("cls");
+                                    printf(ANSI_COLOR_GREEN);
+                                    printf("updated.\n");
+                                    printf(ANSI_COLOR_RESET);
+                                    printf("1) back.\n");
+                                    printf("enter your choice : ");
+                                    scanf(" %d", &run);
+                                    if (run == 1){
+                                        goto start2;
+                                    }
+                                }
                             }else if(select_update == 2){
                                 printf("enter the updated GPA : ");
                                 scanf("%f", &new_student.GPA);
@@ -372,19 +385,20 @@ start2:
                                     if (run == 1){
                                         goto start2;
                                     }
-                                } 
-                            }else{
-                                update_student(&head, new_student, index, select_update);
-                                system("cls");
-                                printf(ANSI_COLOR_GREEN);
-                                printf("updated.\n");
-                                printf(ANSI_COLOR_RESET);
-                                printf("1) back.\n");
-                                printf("enter your choice : ");
-                                scanf(" %d", &run);
-                                if (run == 1){
-                                    goto start2;
                                 }
+                                else{
+                                    update_student(&head, new_student, index, select_update);
+                                    system("cls");
+                                    printf(ANSI_COLOR_GREEN);
+                                    printf("updated.\n");
+                                    printf(ANSI_COLOR_RESET);
+                                    printf("1) back.\n");
+                                    printf("enter your choice : ");
+                                    scanf(" %d", &run);
+                                    if (run == 1){
+                                        goto start2;
+                                    }
+                                } 
                             }
                         }
                     }
